@@ -16,11 +16,11 @@ function addEmployee(){
     console.log( 'in addEmployee' );
     // takes in input from user ${firstName}; <-----
     let newObject = {
-        firstName: 'firstname',
-        lastName: 'lastname',
-        ID: 'ID',
-        title: 'title',
-        annualSalary: 'salray'
+        firstName: $( '#firstName' ).val(),
+        lastName: $( '#lastName' ).val(),
+        ID: $( '#ID' ).val(),
+        title: $( '#title' ).val(),
+        annualSalary: $( '#annualSalary' ).val()
     }
     employees.push(newObject);
     console.log(employees);
