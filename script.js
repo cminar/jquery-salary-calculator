@@ -14,6 +14,16 @@ function onReady(){
 // Adds employee to employeeArray
 function addEmployee(){
     console.log( 'in addEmployee' );
+    // takes in input from user ${firstName}; <-----
+    let newObject = {
+        firstName: 'firstname',
+        lastName: 'lastname',
+        ID: 'ID',
+        title: 'title',
+        annualSalary: 'salray'
+    }
+    employees.push(newObject);
+    console.log(employees);
     // push employee object to DOM
     // update DOM
 }
