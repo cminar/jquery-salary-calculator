@@ -3,3 +3,13 @@ h1{
     background-color: darkgrey;
     color: white;
 }
+#header{
+    justify: center;
+    background-color: darkgrey;
+}
+#row{
+    justify: center;
+}
+.monthly{
+    background-color: red;
+}
