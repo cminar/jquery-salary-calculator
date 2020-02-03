@@ -30,8 +30,13 @@ function addEmployee(){
     // push employee object to DOM
     $( '.body' ).append(`<tr id="row"></tr><td>${newObject.firstName}</td><td>${newObject.lastName}</td><td>${newObject.ID}</td><td>${newObject.title}</td><td>${newObject.annualSalary}</td><td><button id="deleteRow" onclick="deleteEntry(this)">Delete</button></td>`);
     // update DOM
-    monthly += ((newObject.annualSalary)/12);
+    monthly += Number(((newObject.annualSalary)/12));
     $( '#totalMonthly' ).text(`Total Monthly: ${monthly}`);
+    
+    if( monthly > 20000){
+        $( '#totalMonthly' ).replaceWith(`<h2 class="red" id="totalMonthly">Total Monthly: ${monthly} </h2>`);
+        console.log('inmonthly');
+    }
 }
 
 // Deletes employee from Array and DOM
@@ -40,8 +45,5 @@ function deleteEntry(emp){
     $( emp ).parent().parent().remove();
     // splice array
     //update DOM
-}
-if( monthly > 20000){
-    $( '#totalMonthly' ).toggleClass( '.monthly' );
 }
 console.log(monthly);
