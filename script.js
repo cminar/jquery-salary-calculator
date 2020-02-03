@@ -12,6 +12,8 @@ function onReady(){
     $( '#submitButton' ).on( 'click', addEmployee);
     $( '#deleteRow' ).on( 'click', deleteEntry );
 }
+// event.preventDefault //prevents the page from refreshing if using submit button and <forum>
+
 
 // Adds employee to employeeArray
 function addEmployee(){
@@ -40,9 +42,9 @@ function addEmployee(){
 }
 
 // Deletes employee from Array and DOM
-function deleteEntry(emp){
-    console.log( 'in deleteEntry', emp );
-    $( emp ).parent().parent().remove();
+function deleteEntry(del){
+    console.log( 'in deleteEntry', del );
+    $( del ).parent().parent().remove();
     // splice array
     //update DOM
 }
